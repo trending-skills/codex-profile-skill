@@ -4,6 +4,10 @@ Create public-safe AI collaboration profile sites from aggregate Codex metadata.
 
 `codex-profile` is a reusable Codex skill for turning local Codex activity signals into a publishable static profile page. It is designed for builders, maintainers, and teams who want to show AI-assisted engineering work without exposing private prompts, repository paths, project names, client names, or file contents.
 
+## Live Example
+
+See a generated profile example: https://mandarbadve.github.io/
+
 ## What It Generates
 
 - A static AI collaboration profile page
