@@ -706,6 +706,20 @@
         font: 14px/1.55 ui-monospace, SFMono-Regular, Menlo, monospace;
       }
 
+      .source-credit {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        margin-top: 12px;
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--green);
+        background: var(--soft-panel);
+        font: 700 13px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+        text-decoration: none;
+      }
+
       @media (max-width: 850px) {
         .hero,
         .grid,
@@ -1333,9 +1347,11 @@
           AI collaboration profile generated from Codex metadata: 490 state
           threads, 492 rollout files, 464 session-index records, and 82
           prompt-history records, with 331 ChatGPT conversation blobs counted
-          as part of the broader activity snapshot. Built with the open-source
-          <a href="https://github.com/trending-skills/codex-profile-skill">Codex Profile Skill</a>.
+          as part of the broader activity snapshot.
         </p>
+        <a class="source-credit" href="https://github.com/trending-skills/codex-profile-skill">
+          Built with the open-source Codex Profile Skill.
+        </a>
       </section>
     </main>
     <script>
