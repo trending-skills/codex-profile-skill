@@ -1,0 +1,263 @@
+{
+  "sources_used": {
+    "codex_session_index_records": 464,
+    "codex_history_prompts": 82,
+    "codex_session_files": 492,
+    "codex_state_threads": 490,
+    "chatgpt_local_binary_conversation_blobs_count_only": 331
+  },
+  "date_range_utc": {
+    "first_seen": "2026-01-21T16:18:04.796000+00:00",
+    "last_seen": "2026-06-01T16:48:42.771750+00:00",
+    "active_days": 56
+  },
+  "volume": {
+    "threads_or_sessions_indexed": 490,
+    "session_files": 492,
+    "rollout_user_events_seen": 20484,
+    "rollout_assistant_events_seen": 11146,
+    "tool_events_seen_in_rollouts": 46643,
+    "distinct_workspaces": 38,
+    "long_structured_prompts": 13398,
+    "chatgpt_conversations_count_only": 331
+  },
+  "work_mix": [
+    ["Architecture and planning", 1808],
+    ["Product engineering", 758],
+    ["Content and publishing", 499],
+    ["Testing and verification", 322],
+    ["Debugging and repair", 289],
+    ["AI and agent systems", 283],
+    ["Data and infrastructure", 251]
+  ],
+  "action_mix": [
+    ["implementation", 1226],
+    ["planning", 912],
+    ["verification", 630],
+    ["review", 544],
+    ["debugging", 163],
+    ["publishing", 21]
+  ],
+  "workbench_tools": [
+    {
+      "name": "Codex",
+      "group": "Agent interface",
+      "score": 346,
+      "matched_terms": ["codex"]
+    },
+    {
+      "name": "TypeScript",
+      "group": "Language",
+      "score": 344,
+      "matched_terms": ["typescript", "ts", "tsx"]
+    },
+    {
+      "name": "GitHub",
+      "group": "Repository",
+      "score": 120,
+      "matched_terms": ["github", "ci"]
+    },
+    {
+      "name": "React",
+      "group": "Frontend",
+      "score": 119,
+      "matched_terms": ["react", "react native"]
+    },
+    {
+      "name": "Expo",
+      "group": "Mobile",
+      "score": 100,
+      "matched_terms": ["expo"]
+    },
+    {
+      "name": "Playwright",
+      "group": "Verification",
+      "score": 86,
+      "matched_terms": ["playwright", "e2e"]
+    },
+    {
+      "name": "Supabase / Postgres",
+      "group": "Data",
+      "score": 76,
+      "matched_terms": ["supabase", "postgres", "postgresql"]
+    },
+    {
+      "name": "Vercel",
+      "group": "Cloud",
+      "score": 72,
+      "matched_terms": ["vercel", "next.js"]
+    },
+    {
+      "name": "Cloudflare",
+      "group": "Cloud",
+      "score": 13,
+      "matched_terms": ["cloudflare", "workers"]
+    },
+    {
+      "name": "here.now",
+      "group": "Publishing",
+      "score": 3,
+      "matched_terms": ["here.now"]
+    }
+  ],
+  "public_positioning": {
+    "source": "metadata-derived aggregate signals",
+    "approval_required": true,
+    "selected_headline": "Software builder using agents to plan, ship, and verify.",
+    "headline_candidates": [
+      "Software builder using agents to plan, ship, and verify.",
+      "AI-assisted builder with a spec-driven, verification-heavy workflow.",
+      "Software builder turning Expo workflows into working products.",
+      "Product builder strongest in architecture and planning and agent-assisted delivery.",
+      "Builder turning agent-assisted work into useful public artifacts."
+    ],
+    "source_signals": {
+      "work_mix": [
+        "Architecture and planning",
+        "Product engineering",
+        "AI and agent systems"
+      ],
+      "operating_style": [
+        "Spec the work",
+        "Build in loops",
+        "Verify the result"
+      ],
+      "agent_stack": [
+        "Expo",
+        "Superpowers",
+        "Supabase"
+      ],
+      "current_direction": [
+        "Agentic development systems",
+        "Useful public artifacts",
+        "AI-native product interfaces"
+      ]
+    },
+    "notes": [
+      "Generated from aggregate signal names and scores, not raw prompts.",
+      "The selected headline is a default candidate and should be approved before publishing.",
+      "Identity, location, and contact details remain user-provided."
+    ]
+  },
+  "agent_stack": [
+    {
+      "name": "Expo",
+      "group": "Mobile and native",
+      "score": 739,
+      "matched_terms": ["expo", "react native", "mobile"]
+    },
+    {
+      "name": "Superpowers",
+      "group": "Workflow layer",
+      "score": 530,
+      "matched_terms": ["superpowers", "test-driven-development", "requesting-code-review"]
+    },
+    {
+      "name": "Supabase",
+      "group": "Data and backend",
+      "score": 287,
+      "matched_terms": ["supabase", "postgres", "migration", "schema"]
+    },
+    {
+      "name": "Browser / Playwright",
+      "group": "Browser QA",
+      "score": 193,
+      "matched_terms": ["browser", "playwright", "screenshot", "e2e"]
+    },
+    {
+      "name": "GitHub",
+      "group": "Repository and CI",
+      "score": 120,
+      "matched_terms": ["github", "ci"]
+    },
+    {
+      "name": "Vercel",
+      "group": "Cloud and deploy",
+      "score": 72,
+      "matched_terms": ["vercel", "next.js"]
+    },
+    {
+      "name": "Cloudflare",
+      "group": "Cloud and deploy",
+      "score": 13,
+      "matched_terms": ["cloudflare", "workers"]
+    }
+  ],
+  "agent_stack_notes": [
+    "Conservative keyword scan over public-safe metadata text.",
+    "Structured event extraction from tool namespaces and skill references is the preferred next step when records expose it safely.",
+    "Scores are directional, not exhaustive proof of every plugin or skill loaded in a session."
+  ],
+  "languages": [
+    {
+      "name": "TypeScript / JavaScript",
+      "group": "Primary",
+      "score": 644,
+      "matched_terms": ["typescript", "javascript", "react", "tsx", "node"],
+      "summary": "Frontend, full-stack app work, automation scripts, browser verification, and UI publishing workflows."
+    },
+    {
+      "name": "Python",
+      "group": "Used",
+      "score": 356,
+      "matched_terms": ["python", "py", "pytest"],
+      "summary": "Data processing, local analysis scripts, workers, automation, and support tooling around AI-assisted workflows."
+    }
+  ],
+  "operating_style": [
+    {
+      "name": "Spec the work",
+      "group": "Planning",
+      "score": 1565,
+      "matched_terms": ["plan", "spec", "prd", "requirements", "architecture", "scope"],
+      "summary": "Turn rough ideas into scoped plans, explicit constraints, and concrete acceptance checks before implementation starts."
+    },
+    {
+      "name": "Build in loops",
+      "group": "Implementation",
+      "score": 1460,
+      "matched_terms": ["implement", "build", "loop", "review", "debug", "refactor"],
+      "summary": "Use agents for implementation, review, debugging, documentation, and test feedback instead of one-shot generation."
+    },
+    {
+      "name": "Verify the result",
+      "group": "Verification",
+      "score": 640,
+      "matched_terms": ["verify", "test", "playwright", "screenshot", "lint", "ci", "coverage", "validation"],
+      "summary": "Prefer runnable checks, browser inspection, CI-style validation, and direct artifact review over confidence alone."
+    }
+  ],
+  "current_direction": [
+    {
+      "name": "Agentic development systems",
+      "group": "Exploring",
+      "score": 2342,
+      "matched_terms": ["agent", "agents", "superpowers", "workflow", "mcp", "codex"],
+      "summary": "Workflows where agents help plan, implement, inspect, and maintain software across multiple sessions."
+    },
+    {
+      "name": "Useful public artifacts",
+      "group": "Sharing",
+      "score": 1288,
+      "matched_terms": ["publish", "website", "profile", "docs", "documentation", "demo"],
+      "summary": "Profiles, pages, prototypes, docs, and demos that can be safely published without leaking private project context."
+    },
+    {
+      "name": "AI-native product interfaces",
+      "group": "Building",
+      "score": 509,
+      "matched_terms": ["ai", "llm", "chat", "interface", "product", "app"],
+      "summary": "Product experiences that use AI as part of the core workflow, not a decorative layer added after the fact."
+    }
+  ],
+  "derived_profile_notes": [
+    "Workbench, languages, operating style, and current direction are derived from metadata keyword and tool-signal scores.",
+    "Identity, location, and contact details remain user-provided or template-provided.",
+    "Public copy is summarized from aggregate signals and should be reviewed before publishing."
+  ],
+  "privacy_notes": [
+    "No raw project names, repository paths, prompts, titles, or file contents are included.",
+    "ChatGPT conversation blobs were counted only because the local storage is binary app data.",
+    "Counts are approximate because some sessions can be indexed in more than one Codex store."
+  ]
+}

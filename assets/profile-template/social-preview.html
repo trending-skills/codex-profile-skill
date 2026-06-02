@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1200, initial-scale=1" />
+    <title>AI Collaboration Profile Preview</title>
+    <style>
+      :root {
+        --ink: #18211f;
+        --muted: #5d6964;
+        --paper: #f8f7f1;
+        --panel: #ffffff;
+        --line: #d9ded3;
+        --green: #2e6f5d;
+        --blue: #315f8c;
+        --yellow: #d99a35;
+        --shadow: rgba(24, 33, 31, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, rgba(49, 95, 140, 0.08) 1px, transparent 1px),
+          linear-gradient(rgba(46, 111, 93, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 28px 28px;
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .preview-card {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        padding: 58px 68px;
+      }
+
+      .preview-card::after {
+        content: "";
+        position: absolute;
+        right: 54px;
+        bottom: 44px;
+        width: 350px;
+        aspect-ratio: 1;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        background:
+          radial-gradient(circle at center, rgba(46, 111, 93, 0.16) 0 16%, transparent 16% 100%),
+          conic-gradient(
+            from -28deg,
+            var(--green) 0 43%,
+            var(--blue) 43% 68%,
+            var(--yellow) 68% 84%,
+            #b45447 84% 100%
+          );
+        opacity: 0.88;
+      }
+
+      .layout {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 390px;
+        gap: 46px;
+        height: 100%;
+        align-items: center;
+      }
+
+      .eyebrow,
+      .label,
+      .pill,
+      .metric span {
+        font: 700 18px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .eyebrow,
+      .label {
+        color: var(--green);
+      }
+
+      h1 {
+        max-width: 720px;
+        margin: 20px 0 22px;
+        font-size: 78px;
+        line-height: 0.96;
+        letter-spacing: 0;
+      }
+
+      .summary {
+        max-width: 690px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 27px;
+        line-height: 1.34;
+      }
+
+      .identity-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 42px;
+        padding: 10px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.72);
+        color: var(--ink);
+        font-size: 16px;
+      }
+
+      .panel {
+        display: grid;
+        gap: 18px;
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 10px 10px 0 var(--shadow);
+      }
+
+      .person {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 18px;
+        align-items: center;
+      }
+
+      .avatar {
+        display: grid;
+        place-items: center;
+        width: 92px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        color: #ffffff;
+        background: var(--green);
+        font: 700 34px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .name {
+        margin: 0;
+        font-size: 42px;
+        line-height: 1;
+      }
+
+      .role {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font: 700 15px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .metrics {
+        display: grid;
+        gap: 10px;
+      }
+
+      .metric {
+        display: grid;
+        grid-template-columns: 92px minmax(0, 1fr);
+        gap: 14px;
+        align-items: center;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+
+      .metric strong {
+        color: var(--green);
+        font: 700 35px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .metric span {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding-top: 8px;
+      }
+
+      .stack span {
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--paper);
+        font: 700 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="preview-card" aria-label="Social preview image">
+      <div class="layout">
+        <section>
+          <div class="eyebrow">AI Collaboration Profile</div>
+          <h1>Software builder using agents to plan, ship, and verify.</h1>
+          <p class="summary">
+            A public snapshot of sustained AI-assisted product engineering,
+            agent workflows, verification loops, and privacy-conscious delivery.
+          </p>
+          <div class="identity-row" aria-label="Profile tags">
+            <span class="pill">Codex metadata snapshot</span>
+            <span class="pill">Agentic workflows</span>
+            <span class="pill">Product engineering</span>
+          </div>
+        </section>
+        <aside class="panel" aria-label="Profile metrics">
+          <div class="person">
+            <div class="avatar" aria-hidden="true">MB</div>
+            <div>
+              <p class="name">Mandar Badve</p>
+              <p class="role">AI-assisted software builder</p>
+            </div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><strong>490</strong><span>Codex threads indexed</span></div>
+            <div class="metric"><strong>56</strong><span>active days observed</span></div>
+            <div class="metric"><strong>38</strong><span>distinct workspaces</span></div>
+          </div>
+          <div>
+            <div class="label">Observed stack</div>
+            <div class="stack">
+              <span>Expo</span>
+              <span>Superpowers</span>
+              <span>Supabase</span>
+              <span>GitHub</span>
+              <span>Vercel</span>
+              <span>Cloudflare</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>

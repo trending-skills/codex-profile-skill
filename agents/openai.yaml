@@ -1,0 +1,6 @@
+interface:
+  display_name: "Codex Profile"
+  short_description: "Public AI profile from Codex metadata."
+  default_prompt: "Use $codex-profile to create a public-safe AI collaboration profile from Codex metadata."
+policy:
+  allow_implicit_invocation: true
